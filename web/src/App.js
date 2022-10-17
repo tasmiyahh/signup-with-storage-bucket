@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
 
     let getAllUsers = async () => {
-      let response = await axios.get('http://localhost:5001/users');
+      let response = await axios.get('https://login-with-bucket.web.app/users');
       setUsers(response.data.data)
     }
     getAllUsers();
@@ -44,7 +44,7 @@ function App() {
 
     axios({
       method: 'post',
-      url: "http://localhost:5001/signup",
+      url: "https://login-with-bucket.web.app/signup",
       data: formData,
       headers: { 'Content-Type': 'multipart/form-data' },
       // withCredentials: true
